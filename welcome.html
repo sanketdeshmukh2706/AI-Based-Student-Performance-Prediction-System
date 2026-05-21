@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | Student Performance</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="welcome-card">
+        <h1>Student Performance Analysis System</h1>
+
+        <p>
+            This project is designed to analyze and predict student academic
+            performance using data analysis and machine learning techniques.
+            It helps in understanding student progress, strengths, and
+            areas that need improvement.
+        </p>
+
+        <div class="btn-group">
+            <a href="{{ url_for('login') }}" class="btn login-btn">Login</a>
+            <a href="{{ url_for('aboutproject') }}" class="btn about-btn">About Project</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

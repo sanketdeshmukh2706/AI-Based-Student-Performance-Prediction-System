@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+<div class="layout">
+ <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Student Panel</h2>
+    <ul>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/students" >Student</a></li>
+      <li><a href="/profile" >Report Card</a></li>
+      <li><a href="/prediction">Prediction</a></li>
+      <li><a href="/report" class="active">Report</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </aside>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Student Performance Report</h1>
+    </div>
+
+    <div class="card">
+    <div><p>Name: <span id="name"></span> </p>
+        <p>Roll No.: <span id="roll"></span> </p>
+        <p>Branch: <span id="branch"></span></p>
+        <p>Percentage: <span id="FP"></span>%</p>
+        <p>Predicted Performance: <span id="PP" style="color:green; font-size: 22px;"></span></p>
+        <br>
+        <div class="print"><a href="/print_page">View PDF</a></div></div>
+    </div>
+</div>
+</div>
+<script src="/static/js/report.js"></script> 
+</body>
+</html>
