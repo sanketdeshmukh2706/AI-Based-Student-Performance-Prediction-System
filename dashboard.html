@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Panel</title>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+     <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Student Panel</h2>
+    <ul>
+      <li><a href="/dashboard" class="active">Dashboard</a></li>
+      <li><a href="/students" >Student</a></li>
+      <li><a href="/profile" >Report Card</a></li>
+      <li><a href="/prediction">Prediction</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </aside>
+
+    <!-- Footer -->
+    <div class="main_content">
+    <div class="content">
+         <section>
+        <div class="welstu"><h1> Welcome Back <span id="name"></span></h1></div>
+        <div class="welDes" style="color: black;"><p> This is Your Deshboard. </p></div>
+    </section>
+    </div>
+<div class="chart-box">
+  <h2>Subject Wise Marks </h2>
+  <div class="image1">
+  <br>
+  <img src="data:image/png;base64,{{charts.chart1}}" width="245">
+  <img src="data:image/png;base64,{{charts.chart2}}" width="245">
+  <img src="data:image/png;base64,{{charts.chart3}}" width="245">
+  <img src="data:image/png;base64,{{charts.chart4}}" width="245">
+  <img src="data:image/png;base64,{{charts.chart5}}" width="245"></div>
+  <div class="att">
+    <img src="data:image/png;base64,{{charts.chart6}}">
+    <img src="data:image/png;base64,{{charts.chart7}}">
+  </div>
+  <div class="print">
+     <a href="/dashboard1">Next</a>
+</div>
+</div>
+</div>
+</div>
+<script src="/static/js/student.js"></script>
+</body>
+</html>
