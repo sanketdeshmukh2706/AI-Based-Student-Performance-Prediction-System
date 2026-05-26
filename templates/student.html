@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../static/css/student.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Student Panel</h2>
+    <ul>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/students" class="active">Student</a></li>
+      <li><a href="/profile" >Report Card</a></li>
+      <li><a href="/prediction">Prediction</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- HEADER CARD -->
+    <section class="profile-header2">
+      <img src="{{ url_for('static', filename='images/Student.png') }}" class="avatar">
+      <div class="profile-text">
+        <p class="roll">Roll Number: <span id="roll"></span></p>
+        <h1 id="name"></h1>
+        <p style="font-size: 15px;"> Student Branch :<span id="branch"></span> </p>
+        <p style="font-size: 15px;"> Student Semester :  <span id="semester"></span></p>
+        <p style="font-size: 15px;"> Student Gender :  <span id="Gender"></span>
+      </div>
+    </section>
+
+    <!-- TOTAL ATTENDANCE -->
+    <section class="attendance-pill">
+      ✔ Total Attendance <span id="attandance"></span>%
+    </section>
+
+    <!-- SUBJECT CARDS -->
+    <section class="cards">
+
+      <div class="subject-card blue">
+        <h3 id="sub1"></h3>
+        <p class="label">Marks</p>
+        <p class="marks"><span id="math"></span>/100</p>
+        <div class="progress"><div></div></div>
+        <p class="sub-att">
+          Attendance: <span id="math_att"></span>%
+          (<span id="math_cls"></span>)
+        </p>
+      </div>
+
+      <div class="subject-card yellow">
+        <h3 id="sub2"></h3>
+        <p class="label">Marks</p>
+        <p class="marks"><span id="ds"></span>/100</p>
+        <div class="progress"><div></div></div>
+        <p class="sub-att">
+          Attendance: <span id="ds_att"></span>%
+          (<span id="ds_cls"></span>)
+        </p>
+      </div>
+
+      <div class="subject-card pink">
+        <h3 id="sub3"></h3>
+        <p class="label">Marks</p>
+        <p class="marks"><span id="os"></span>/100</p>
+        <div class="progress"><div></div></div>
+        <p class="sub-att">
+          Attendance: <span id="os_att"></span>%
+          (<span id="os_cls"></span>)
+        </p>
+      </div>
+
+      <div class="subject-card teal">
+        <h3 id="sub4"></h3>
+        <p class="label">Marks</p>
+        <p class="marks"><span id="dbms"></span>/100</p>
+        <div class="progress"><div></div></div>
+        <p class="sub-att">
+          Attendance: <span id="dbms_att"></span>%
+          (<span id="dbms_cls"></span>)
+        </p>
+      </div>
+
+      <div class="subject-card purple">
+        <h3 id="sub5"></h3>
+        <p class="label">Marks</p>
+        <p class="marks"><span id="ai"></span>/100</p>
+        <div class="progress"><div></div></div>
+        <p class="sub-att">
+          Attendance: <span id="ai_att"></span>%
+          (<span id="ai_cls"></span>)
+        </p>
+      </div>
+    </section>
+   <div id="result" style="margin-top:20px; font-size:18px;"></div>
+  </main>
+</div>
+
+<script src="/static/js/student.js"></script> 
+</body>
+</html>

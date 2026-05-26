@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Prediction</title>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+ <div class="layout">
+  <aside class="sidebar">
+    <h2>Student Panel</h2>
+    <ul>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/students" >Student</a></li>
+      <li><a href="/profile" >Report Card</a></li>
+      <li><a href="/prediction" class="active">Prediction</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </aside>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <div class="topbar2">
+        <div class="performance"><h1>Performance Prediction</h1></div>
+        <div class="performance"><span>Enter marks to predict performance</span></div>
+    </div>
+
+    <!-- PREDICTION FORM -->
+     <div class="mark">
+    <form onsubmit="event.preventDefault(); predictPerformance();">
+
+        <label>Attendance</label>
+        <input type="number" id="attendance" min="0" max="100" required>
+        
+        <label>Previous Semester Marks</label>
+        <input type="number" id="semester" min="0" max="100" required>
+
+        <label>Maths Marks</label>
+        <input type="number" id="maths" min="0" max="100" required>
+
+        <label>DS Marks</label>
+        <input type="number" id="ds" min="0" max="100" required>
+
+        <label>OS Marks</label>
+        <input type="number" id="os" min="0" max="100" required>
+
+        <label>DBMS Marks</label>
+        <input type="number" id="dbms" min="0" max="100" required>
+
+        <label>AI Marks</label>
+        <input type="number" id="ai" min="0" max="100" required>
+
+        <button type="submit">Predict Performance</button>
+
+        <!-- RESULT OUTPUT -->
+        <div id="result" style="margin-top:20px; font-size:18px;"></div>
+
+    </form>
+     </div>
+</div>
+</div>
+<!-- JS FILE -->
+<script src="../static/js/prediction.js"></script>
+
+</body>
+</html>

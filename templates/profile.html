@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+        <link rel="stylesheet" href="../static/css/dashboard.css">
+
+</head>
+<body>
+    <div class="layout">
+
+     <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Student Panel</h2>
+    <ul>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/students" >Student</a></li>
+      <li><a href="/profile" class="active">Report Card</a></li>
+      <li><a href="/prediction">Prediction</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/about">About</a></li>
+     </ul>
+     <a href="/logout" class="logout-btn">Logout</a>
+     </aside>
+    
+
+<div class="report-card">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Sagar Institute Of Reasearch & Technology Bhopal</h1>
+        <p>Student Report Card</p>
+    </div>
+
+    <!-- Basic Info -->
+    <div class="info-grid">
+        <div><b>Roll No:</b> <span class="deco" id="roll">---</span></div>
+        <div><b>Name:</b> <span class="deco" id="name">---</span></div>
+        <div><b>Gender:</b> <span class="deco" id="Gender">---</span></div>
+        <div><b>Semester:</b> <span class="deco" id="semester">---</span></div>
+        <div><b>Branch:</b> <span class="deco" id="branch">---</span></div>
+        <div><b>Attendance:</b> <span class="deco" id="attandance">---</span>%</div>
+    </div>
+
+    <!-- Marks Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><p id="sub1"></p></td><td id="math">---</td></tr>
+            <tr><td><p id="sub2"></p></td><td id="ds">---</td></tr>
+            <tr><td><p id="sub3"></p></td></td><td id="os">---</td></tr>
+            <tr><td><p id="sub4"></p></td></td><td id="dbms">---</td></tr>
+            <tr><td><p id="sub5"></p></td></td><td id="ai">---</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Result -->
+    <div class="result">
+        <div><b>Final Percentage:</b> <span id="FP">---</span>%</div> 
+        <div><b>Performance:</b> <span id="PP">---</span></div>
+    </div>
+
+    <!-- Personal Details -->
+    <div class="section-title">Personal Details</div>
+    <div class="info-grid">
+        <div><b>Father Name:</b> <span id="fname">---</span></div>
+        <div><b>Mother Name:</b> <span id="mname">---</span></div>
+        <div><b>Date of Birth:</b> <span id="DOB">---</span></div>
+        <div><b>Blood Group:</b> <span id="BG">---</span></div>
+        <div><b>Age:</b> <span id="Age">---</span></div>
+        <div><b>Mobile:</b> <span id="mobile">---</span></div>
+        <div><b>Email:</b> <span id="mail_ID">---</span></div>
+    </div>
+
+    <!-- Address -->
+    <div class="section-title">Address</div>
+    <div class="address">
+        <span id="address">---</span>,
+        <span id="City">---</span>,
+        <span id="State">---</span>,
+        <span id="Country">---</span> -
+        <span id="Pincode">---</span>
+    </div>
+
+    <!-- Extra -->
+    <div class="section-title">Extra Activities</div>
+    <div class="info-grid">
+        <div><b>Participant:</b> <span id="Participant">---</span></div>
+        <div><b>Game:</b> <span id="Game">---</span></div>
+    </div>
+</div>
+    </div>
+<script src="/static/js/profile.js"></script> 
+</body>
+</html>
