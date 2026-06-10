@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Performance Dashboard</title>
+  <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+  <div class="layout">
+<aside class="sidebar">
+    <h2>Student Panel</h2>
+    <ul>
+      <li><a href="/dashboard1" class="active">Dashboard</a></li>
+      <li><a href="/students" >Student</a></li>
+      <li><a href="/profile" >Report Card</a></li>
+      <li><a href="/prediction">Prediction</a></li>
+      <li><a href="/report">Report</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </aside>
+
+
+ <div class="main_content">
+    <div class="content">
+         <section>
+        <div class="welstu"><h1>STUDENT PERFORMANCE DASHBOARD</h1></div>
+    </section>
+    </div>
+    <div class="image_content">
+      <div class="barchart">
+      <img src="data:image/png;base64,{{charts.chart1}}">
+      <div class="showmarks">
+        <div class="subject-card blue">
+        <h3>Maximum Marks</h3>
+        <!-- <p class="label" id="sub1"></p> -->
+        <p class="marks"><span id="max"></span>/100</p>
+        <div class="progress"><div></div></div>
+      </div>
+        <div class="subject-card teal">
+        <h3>Minimum Marks</h3>
+        <!-- <p class="label" id="sub2"></p> -->
+        <p class="marks"><span id="min"></span>/100</p>
+        <div class="progress"><div></div></div>
+      </div>
+        <div class="subject-card purple">
+        <h3>Average Marks</h3>
+        <p class="marks"><span id="avg"></span></p>
+        <div class="progress"><div></div></div>
+      </div>
+      </div>
+      </div>
+      <div class="linechart">
+        <img src="data:image/png;base64,{{charts.chart2}}">
+      </div>
+        <div class="print">
+     <a href="/dashboard">Back</a>
+</div>
+    </div>
+</div>
+  </div>
+<script src="/static/js/dashboard1.js"></script>
+</body>
+</html>
